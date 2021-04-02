@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/latihan-react-js/static/css/main.d2bd6f74.chunk.css",
-    "main.js": "/latihan-react-js/static/js/main.ced4de6f.chunk.js",
-    "main.js.map": "/latihan-react-js/static/js/main.ced4de6f.chunk.js.map",
-    "runtime-main.js": "/latihan-react-js/static/js/runtime-main.4bde7251.js",
-    "runtime-main.js.map": "/latihan-react-js/static/js/runtime-main.4bde7251.js.map",
-    "static/js/2.b484b9d1.chunk.js": "/latihan-react-js/static/js/2.b484b9d1.chunk.js",
-    "static/js/2.b484b9d1.chunk.js.map": "/latihan-react-js/static/js/2.b484b9d1.chunk.js.map",
-    "static/js/3.cc619ffe.chunk.js": "/latihan-react-js/static/js/3.cc619ffe.chunk.js",
-    "static/js/3.cc619ffe.chunk.js.map": "/latihan-react-js/static/js/3.cc619ffe.chunk.js.map",
+    "main.css": "/latihan-react-js/static/css/main.4827ed12.chunk.css",
+    "main.js": "/latihan-react-js/static/js/main.512a123e.chunk.js",
+    "main.js.map": "/latihan-react-js/static/js/main.512a123e.chunk.js.map",
+    "runtime-main.js": "/latihan-react-js/static/js/runtime-main.737b1cf1.js",
+    "runtime-main.js.map": "/latihan-react-js/static/js/runtime-main.737b1cf1.js.map",
+    "static/js/2.00e9fbe8.chunk.js": "/latihan-react-js/static/js/2.00e9fbe8.chunk.js",
+    "static/js/2.00e9fbe8.chunk.js.map": "/latihan-react-js/static/js/2.00e9fbe8.chunk.js.map",
+    "static/js/3.8f214126.chunk.js": "/latihan-react-js/static/js/3.8f214126.chunk.js",
+    "static/js/3.8f214126.chunk.js.map": "/latihan-react-js/static/js/3.8f214126.chunk.js.map",
     "index.html": "/latihan-react-js/index.html",
-    "static/css/main.d2bd6f74.chunk.css.map": "/latihan-react-js/static/css/main.d2bd6f74.chunk.css.map",
-    "static/js/2.b484b9d1.chunk.js.LICENSE.txt": "/latihan-react-js/static/js/2.b484b9d1.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/latihan-react-js/static/media/logo.6ce24c58.svg"
+    "static/css/main.4827ed12.chunk.css.map": "/latihan-react-js/static/css/main.4827ed12.chunk.css.map",
+    "static/js/2.00e9fbe8.chunk.js.LICENSE.txt": "/latihan-react-js/static/js/2.00e9fbe8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.4bde7251.js",
-    "static/js/2.b484b9d1.chunk.js",
-    "static/css/main.d2bd6f74.chunk.css",
-    "static/js/main.ced4de6f.chunk.js"
+    "static/js/runtime-main.737b1cf1.js",
+    "static/js/2.00e9fbe8.chunk.js",
+    "static/css/main.4827ed12.chunk.css",
+    "static/js/main.512a123e.chunk.js"
   ]
 }
