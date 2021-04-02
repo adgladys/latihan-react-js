@@ -1,86 +1,62 @@
-import React, {useState, useRef} from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-const App = () => {
-  const [timer, setTimer] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-  const increment: any = useRef(null);
-
-  const handleStart = () => {
-    setIsActive(true)
-    increment.current = setInterval(() => {
-      setTimer((timer) => timer + 1)
-    }, 10)
-  }
-
-  const handlePause = () => {
-    setIsActive(false)
-    clearInterval(increment.current)
-  }
-
-  const handleResume = () => {
-    setIsActive(true);
-    increment.current = setInterval(() => {
-      setTimer((timer) => timer + 1)
-    }, 10)
-  }
-
-  const handleReset = () => {
-    clearInterval(increment.current);
-    setIsActive(false);
-    setTimer(0);
-  }
-
-  console.log("timer", timer);
-  const formatTime = () => {
-    const centiSeconds = `0${timer % 100}`.slice(-2)
-    const seconds = `0${Math.floor(timer / 100) % 60}`.slice(-2)
-    const minutes = `0${Math.floor(timer / 6000 % 60)}`.slice(-2)
-
-    return `${minutes} : ${seconds} : ${centiSeconds}`
-  }
-
-  const renderingBtn = () => {
-    if (!isActive && timer === 0) {
-      return (
-        <button onClick = {handleStart}>Start</button>
-      )
-    } else if (!isActive && timer > 0) {
-      return (
-        <>
-          <button onClick={handleResume}>Resume</button>
-          <button onClick={handleReset}>Reset</button>
-        </>
-      )
-    }
-
-    return (
-      <>
-        <button onClick={handlePause}>Pause</button>
-      </>
-    )
-  }
-
-  return (
-    <div className="App">
-      <div className="Stopwatch">
-        <div className="Stopwatch-header">Stopwatch</div>
-        <div className="Stopwatch-display">
-          {formatTime()}
-        </div>
-        {renderingBtn()}
-      </div>
-    </div>
-  )
-}
-
+"use strict";
+exports.__esModule = true;
+var react_1 = require("react");
+require("./App.css");
+var App = function () {
+    var _a = react_1.useState(0), timer = _a[0], setTimer = _a[1];
+    var _b = react_1.useState(false), isActive = _b[0], setIsActive = _b[1];
+    var increment = react_1.useRef(null);
+    var handleStart = function () {
+        setIsActive(true);
+        increment.current = setInterval(function () {
+            setTimer(function (timer) { return timer + 1; });
+        }, 10);
+    };
+    var handlePause = function () {
+        setIsActive(false);
+        clearInterval(increment.current);
+    };
+    var handleResume = function () {
+        setIsActive(true);
+        increment.current = setInterval(function () {
+            setTimer(function (timer) { return timer + 1; });
+        }, 10);
+    };
+    var handleReset = function () {
+        clearInterval(increment.current);
+        setIsActive(false);
+        setTimer(0);
+    };
+    console.log("timer", timer);
+    var formatTime = function () {
+        var centiSeconds = ("0" + timer % 100).slice(-2);
+        var seconds = ("0" + Math.floor(timer / 100) % 60).slice(-2);
+        var minutes = ("0" + Math.floor(timer / 6000 % 60)).slice(-2);
+        return minutes + " : " + seconds + " : " + centiSeconds;
+    };
+    var renderingBtn = function () {
+        if (!isActive && timer === 0) {
+            return (react_1["default"].createElement("button", { onClick: handleStart }, "Start"));
+        }
+        else if (!isActive && timer > 0) {
+            return (react_1["default"].createElement(react_1["default"].Fragment, null,
+                react_1["default"].createElement("button", { onClick: handleResume }, "Resume"),
+                react_1["default"].createElement("button", { onClick: handleReset }, "Reset")));
+        }
+        return (react_1["default"].createElement(react_1["default"].Fragment, null,
+            react_1["default"].createElement("button", { onClick: handlePause }, "Pause")));
+    };
+    return (react_1["default"].createElement("div", { className: "App" },
+        react_1["default"].createElement("div", { className: "Stopwatch" },
+            react_1["default"].createElement("div", { className: "Stopwatch-header" }, "Stopwatch"),
+            react_1["default"].createElement("div", { className: "Stopwatch-display" }, formatTime()),
+            renderingBtn())));
+};
 //week 8
 // interface IAppState {
 //   fullname: string;
 //   age: string;
 // }
-
 // class App extends React.Component<{}, IAppState> {
 //   constructor(props) {
 //     super(props);
@@ -89,21 +65,16 @@ const App = () => {
 //       age: '',
 //     }
 //   }
-
 //   handleBtnClick = () => {
 //     alert(`${this.state.fullname} ${this.state.age}`)
 //   }
-
 //   handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 //     const {name} = event.target;
 //     const {value} = event.target;
-
 //     const newState = {...this.state};
 //     newState[name] = value;
-
 //     this.setState(newState);
 //   }
-
 //   public render() {
 //     return (
 //       <div className = "App">
@@ -121,23 +92,18 @@ const App = () => {
 //     )
 //   }
 // }
-
-
 //week 7
 // interface IData {
 //   id: string;
 //   name: string;
 //   email: string;
 // }
-
 // interface IAppState {
 //   showTable: boolean;
 // }
-
 // interface IAppProps {
 //   data: IData[]
 // }
-
 // class App extends React.Component<IAppProps, IAppState>{
 //   constructor(props) {
 //     super(props);
@@ -145,24 +111,19 @@ const App = () => {
 //       showTable: true,
 //     }
 //   }
-
 //   componentDidMount() {
 //     alert("did mount App component !")
 //   }
-
 //   componentWillUnmount() {
 //     alert("unmounting App component !")
 //   }
-
 //   componentDidUpdate(){
 //     alert("did update called !")
 //   }
-
 //   public toggleShowTable = () => {
 //     const {showTable} = this.state;
 //     this.setState({showTable: !showTable});
 //   };
-
 //   public renderRow = () => {
 //     return this.props.data.map((item) => {
 //       return (
@@ -174,7 +135,6 @@ const App = () => {
 //       )
 //     })
 //   }
-
 //   public renderTable = () => {
 //     if (this.state.showTable) {
 //       return (
@@ -193,7 +153,6 @@ const App = () => {
 //       )
 //     }
 //   }
-
 //   public render() {
 //     return (
 //       <div className="App">
@@ -206,5 +165,4 @@ const App = () => {
 //     );
 //   };
 // };
-
-export default App;
+exports["default"] = App;

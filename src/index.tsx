@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// week 8
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
@@ -13,8 +11,15 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// week 7
+// week 8
+//ReactDOM.render(
+//  <React.StrictMode>
+//    <App />
+//  </React.StrictMode>,
+//  document.getElementById('root')
+//);
 
+// week 7
 // const dataDummy = [
 //   {
 //     id: "1",
